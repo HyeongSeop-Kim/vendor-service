@@ -1,15 +1,13 @@
 spring:
   application:
-    name: project-interface
+    name: vendor-service
   config:
-    import:
-     - 'optional:configserver:'
-     - 'optional:file:.env[.properties]'
+    import: 'optional:configserver:'
   cloud:
     config:
       discovery:
         enabled: true
-        service-id: ${CLOUD_SERVICE_ID}
+        service-id: config-server
 
 eureka:
   instance:

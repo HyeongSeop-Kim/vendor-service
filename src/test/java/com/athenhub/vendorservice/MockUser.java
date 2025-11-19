@@ -1,4 +1,4 @@
-package com.athenhub.projectinterface;
+package com.athenhub.vendorservice;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -30,7 +30,7 @@ import org.springframework.security.test.context.support.WithSecurityContext;
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@WithSecurityContext(factory = WithMockUserSecurityContextFactory.class)
+@WithSecurityContext(factory = com.athenhub.vendorservice.WithMockUserSecurityContextFactory.class)
 public @interface MockUser {
 
   /** 테스트 사용자 UUID. 기본값은 모든 값이 0으로 채워진 UUID. */
